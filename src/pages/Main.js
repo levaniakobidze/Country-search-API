@@ -31,8 +31,6 @@ function Main() {
 
   let fetched = state.length > 0;
 
-  fetched && console.log(state[0]);
-
   return (
     <div>
       <form action='' onSubmit={submitHandler}>
