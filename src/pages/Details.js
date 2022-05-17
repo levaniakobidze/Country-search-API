@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Details.css";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 function Details() {
   const state = useSelector((state) => state.data);
@@ -57,7 +58,9 @@ function Details() {
               <span className='map'>
                 Map <span className='colon-map'> : </span>{" "}
               </span>{" "}
-              <a href={state[0].maps.googleMaps}>link</a>
+              <a href={state[0].maps.googleMaps}>
+                <FaMapMarkerAlt />
+              </a>
             </p>
             <p>
               <span className='week'>
@@ -73,7 +76,7 @@ function Details() {
           </div>
         </div>
       ) : (
-        "adsad"
+        ""
       )}
     </div>
   );

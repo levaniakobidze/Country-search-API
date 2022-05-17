@@ -5,7 +5,7 @@ import { countryActions } from "../redux";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Main.css";
-import { BsSearch } from "react-icons/bs";
+import { FaGlobe } from "react-icons/fa";
 
 function Main() {
   const state = useSelector((state) => state.data);
@@ -15,6 +15,7 @@ function Main() {
   const inputRef = useRef();
   const [inputValue, setInputValue] = useState("");
   const [isCountry, setIsCountry] = useState(true);
+  const [logo, setLogo] = useState(true);
   const fetchData = async (url) => {
     try {
       dispatch(countryActions.loading(true));
@@ -40,8 +41,11 @@ function Main() {
     e.preventDefault();
     const value = inputRef.current.value;
     if (inputValue.trim() === "") {
+      setLogo(true);
       dispatch(countryActions.inValid());
       return;
+    } else {
+      setLogo(false);
     }
     dispatch(countryActions.valid());
     const url = `https://restcountries.com/v3.1/name/${value}`;
@@ -53,6 +57,11 @@ function Main() {
   let fetched = state.length > 0;
   return (
     <div className='main-wrapper'>
+      {logo && (
+        <div className='logo-img'>
+          <FaGlobe className='logo' />
+        </div>
+      )}
       <form action='' onSubmit={submitHandler}>
         <input
           className={!isValid || !isCountry ? "error" : ""}

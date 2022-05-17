@@ -37,55 +37,62 @@ p {
 
 .capital {
   padding-right: 20px;
-  color: red;
+  color: rgb(56, 255, 56);
 }
 .region {
   padding-right: 20px;
-  color: red;
+  color: rgb(56, 255, 56);
 }
 .area {
   padding-right: 20px;
-  color: red;
+  color: rgb(56, 255, 56);
 }
 .flag {
   padding-right: 20px;
-  color: red;
+  color: rgb(56, 255, 56);
 }
 .population {
   padding-right: 20px;
-  color: red;
+  color: rgb(56, 255, 56);
 }
 .map {
   padding-right: 20px;
-  color: red;
+  color: rgb(56, 255, 56);
 }
 .week {
   padding-right: 20px;
-  color: red;
+  color: rgb(56, 255, 56);
 }
 
 .colon-capital {
   margin-left: 15px;
+  color: red;
 }
 
 .colon-region {
   margin-left: 15px;
+  color: red;
 }
 .colon-area {
   margin-left: 32px;
+  color: red;
 }
 
 .colon-flag {
   margin-left: 35px;
+  color: red;
 }
 .colon-population {
   margin-left: 5px;
+  color: red;
 }
 .colon-map {
   margin-left: 35px;
+  color: red;
 }
-.colonw-week {
+.colon-week {
   margin-left: 5px;
+  color: red;
 }
 
 .error {
