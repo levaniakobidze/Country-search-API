@@ -1,0 +1,89 @@
+.details-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202124;
+}
+
+.details-content {
+  box-shadow: 0 10px 6px rgb(23 23 23 / 24%);
+  background: #303134;
+  padding: 0 20px;
+}
+
+img {
+  width: 340px;
+}
+p {
+  color: #fff;
+}
+.back-btn {
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgb(23 23 23 / 24%);
+  background-color: #202124;
+
+  width: 100px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.capital {
+  padding-right: 20px;
+  color: red;
+}
+.region {
+  padding-right: 20px;
+  color: red;
+}
+.area {
+  padding-right: 20px;
+  color: red;
+}
+.flag {
+  padding-right: 20px;
+  color: red;
+}
+.population {
+  padding-right: 20px;
+  color: red;
+}
+.map {
+  padding-right: 20px;
+  color: red;
+}
+.week {
+  padding-right: 20px;
+  color: red;
+}
+
+.colon-capital {
+  margin-left: 15px;
+}
+
+.colon-region {
+  margin-left: 15px;
+}
+.colon-area {
+  margin-left: 32px;
+}
+
+.colon-flag {
+  margin-left: 35px;
+}
+.colon-population {
+  margin-left: 5px;
+}
+.colon-map {
+  margin-left: 35px;
+}
+.colonw-week {
+  margin-left: 5px;
+}

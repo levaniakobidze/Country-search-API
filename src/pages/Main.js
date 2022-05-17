@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { countryActions } from "../redux";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import "./Main.css";
+import { BsSearch } from "react-icons/bs";
 
 function Main() {
   const state = useSelector((state) => state.data);
@@ -11,14 +13,10 @@ function Main() {
   const inputRef = useRef();
 
   const fetchData = async (url) => {
-    try {
-      const response = await fetch(url);
+    const response = await fetch(url);
 
-      const data = await response.json();
-      dispatch(countryActions.saveData(data[0]));
-    } catch (error) {
-      console.log(error);
-    }
+    const data = await response.json();
+    dispatch(countryActions.saveData(data[0]));
   };
 
   const submitHandler = (e) => {
@@ -32,17 +30,17 @@ function Main() {
   let fetched = state.length > 0;
 
   return (
-    <div>
+    <div className='main-wrapper'>
       <form action='' onSubmit={submitHandler}>
         <input ref={inputRef} type='text' placeholder='search countrey' />
-
-        <button type='submit'>Serarch</button>
       </form>
       {fetched && (
         <>
           <h1>{state[0].name.common} </h1>
           <img src={state[0].flags.png} alt='' />
-          <Link to={"/details"}>See more</Link>
+          <Link className='seemore-btn' to={"/details"}>
+            See more
+          </Link>
         </>
       )}
     </div>
