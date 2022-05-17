@@ -69,7 +69,7 @@ function Main() {
           type='text'
           value={inputValue}
           onChange={onChangeHandler}
-          placeholder='search countrey'
+          placeholder='search country'
         />
         {!isCountry && (
           <>
