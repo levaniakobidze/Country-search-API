@@ -1,6 +1,6 @@
 .details-wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,4 +86,19 @@ p {
 }
 .colonw-week {
   margin-left: 5px;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+@media screen and (max-width: 389px) {
+  .details-content {
+    background-color: #202124;
+    padding: 0 10px;
+  }
+  .back-btn {
+    background: #303134;
+    box-shadow: 0 10px 6px rgb(23 23 23 / 24%);
+  }
 }

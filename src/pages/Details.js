@@ -5,6 +5,7 @@ import "./Details.css";
 
 function Details() {
   const state = useSelector((state) => state.data);
+  const isValid = useSelector((state) => state.isInputValid);
 
   let fetched = state.length > 0;
 
@@ -12,7 +13,7 @@ function Details() {
 
   return (
     <div>
-      {fetched ? (
+      {fetched && isValid ? (
         <div className='details-wrapper'>
           <div className='details-content'>
             <h1>{state[0].name.common}</h1>
@@ -37,7 +38,7 @@ function Details() {
                 {" "}
                 Area <span className='colon-area'> : </span>{" "}
               </span>{" "}
-              Area: {state[0].area}Km²{" "}
+              {state[0].area}Km²{" "}
             </p>
             <p>
               {" "}
@@ -64,10 +65,11 @@ function Details() {
               </span>
               {state[0].startOfWeek}
             </p>
-
-            <Link className='back-btn' to={"/"}>
-              Back
-            </Link>
+            <div className='btn-wrapper'>
+              <Link className='back-btn' to={"/"}>
+                Back
+              </Link>
+            </div>
           </div>
         </div>
       ) : (
